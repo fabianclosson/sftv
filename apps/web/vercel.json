@@ -4,13 +4,6 @@
   "framework": "nextjs",
   "installCommand": "cd ../.. && npm ci",
   "devCommand": "cd ../.. && npm run dev --filter=@sftv/web",
-  "env": {
-    "NEXT_PUBLIC_SUPABASE_URL": "@sftv_supabase_url",
-    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "@sftv_supabase_anon_key",
-    "SUPABASE_SERVICE_ROLE_KEY": "@sftv_supabase_service_role_key",
-    "NEXTAUTH_SECRET": "@sftv_nextauth_secret",
-    "NEXTAUTH_URL": "@sftv_nextauth_url"
-  },
   "functions": {
     "app/api/**": {
       "maxDuration": 30
