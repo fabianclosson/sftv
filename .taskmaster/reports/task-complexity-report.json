@@ -1,0 +1,133 @@
+{
+  "meta": {
+    "generatedAt": "2025-06-09T00:01:29.256Z",
+    "tasksAnalyzed": 15,
+    "totalTasks": 15,
+    "analysisCount": 15,
+    "thresholdScore": 5,
+    "projectName": "Taskmaster",
+    "usedResearch": true
+  },
+  "complexityAnalysis": [
+    {
+      "taskId": 1,
+      "taskTitle": "Initialize Project Repository and CI/CD Pipeline",
+      "complexityScore": 7,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Break down the setup of the project repository, Next.js/React/TypeScript initialization, GitHub Actions configuration, Vercel and Supabase deployment, Sentry and Supabase Analytics integration, and dependency pinning into discrete subtasks.",
+      "reasoning": "This task involves multiple tools and integrations (frontend, backend, CI/CD, monitoring, analytics, and dependency management). Each step requires configuration and verification, making it moderately complex and suitable for at least six subtasks."
+    },
+    {
+      "taskId": 2,
+      "taskTitle": "Implement Core Authentication and Authorization",
+      "complexityScore": 8,
+      "recommendedSubtasks": 7,
+      "expansionPrompt": "Expand into subtasks for Supabase Auth setup, JWT session management, password reset flow, PostgreSQL RLS configuration, client-side state management, user data storage, and comprehensive testing.",
+      "reasoning": "Authentication and authorization are critical and involve backend, frontend, security, and state management. Each component (auth, JWT, RLS, password reset, state) is non-trivial and should be isolated for clarity and testability."
+    },
+    {
+      "taskId": 3,
+      "taskTitle": "Design and Implement Database Schema",
+      "complexityScore": 7,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "List subtasks for schema design, table creation, RLS policy implementation, foreign key and constraint setup, migration scripting, and CRUD operation testing.",
+      "reasoning": "Database schema design with RLS and constraints is foundational and impacts all dependent features. Each table and policy requires careful planning and validation."
+    },
+    {
+      "taskId": 4,
+      "taskTitle": "Build Salesforce OAuth 2.0 Integration",
+      "complexityScore": 8,
+      "recommendedSubtasks": 7,
+      "expansionPrompt": "Decompose into subtasks for OAuth flow implementation, token storage, token refresh, dashboard discovery, avatar sync, Salesforce REST API integration, and security testing.",
+      "reasoning": "OAuth integrations are complex due to security, token lifecycle, and third-party API handling. Additional features like dashboard discovery and avatar sync add to the complexity."
+    },
+    {
+      "taskId": 5,
+      "taskTitle": "Develop Dashboard Ingestion and Caching",
+      "complexityScore": 8,
+      "recommendedSubtasks": 7,
+      "expansionPrompt": "Break into subtasks for Salesforce data ingestion, transformation, PostgreSQL caching, in-memory cache setup, TTL enforcement, Supabase Realtime broadcasting, and data consistency testing.",
+      "reasoning": "This task combines data ingestion, transformation, multi-layer caching, and realtime updates, each requiring careful coordination and error handling."
+    },
+    {
+      "taskId": 6,
+      "taskTitle": "Implement TV Client and PIN Pairing",
+      "complexityScore": 8,
+      "recommendedSubtasks": 7,
+      "expansionPrompt": "Expand into subtasks for TV client setup, PIN generation, QR code display, server-side PIN validation, Supabase Realtime integration, 1080p optimization, and offline resilience.",
+      "reasoning": "Building a TV client with secure pairing, realtime updates, and offline support involves multiple technical domains and user experience considerations."
+    },
+    {
+      "taskId": 7,
+      "taskTitle": "Develop Dashboard Management and Slideshow Features",
+      "complexityScore": 7,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "List subtasks for dashboard listing, filtering, search, slideshow creation, drag-and-drop reordering, realtime updates, and preview functionality.",
+      "reasoning": "This feature set covers UI/UX, data management, and realtime collaboration, each requiring focused development and testing."
+    },
+    {
+      "taskId": 8,
+      "taskTitle": "Build Widget Renderer and Theming Engine",
+      "complexityScore": 7,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Decompose into subtasks for WidgetHost component, dynamic import logic, Lightning component support, theming engine, responsive layout, and fallback handling.",
+      "reasoning": "Dynamic rendering and theming for TV displays require modular architecture, responsive design, and robust fallback mechanisms."
+    },
+    {
+      "taskId": 9,
+      "taskTitle": "Implement Billing and Subscription Management",
+      "complexityScore": 7,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Break down into subtasks for Stripe Checkout integration, subscription flow, plan management, invoice handling, payment method updates, and webhook processing.",
+      "reasoning": "Billing involves secure payment flows, plan logic, and integration with external services, each with distinct implementation and testing needs."
+    },
+    {
+      "taskId": 10,
+      "taskTitle": "Develop Team Management and Invitations",
+      "complexityScore": 7,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Expand into subtasks for invite form, role selection, invite acceptance, password setup, RLS enforcement, user enable/disable, and audit logging.",
+      "reasoning": "Team management covers user flows, security, and access control, each requiring separate implementation and validation."
+    },
+    {
+      "taskId": 11,
+      "taskTitle": "Implement Observability and Alerting",
+      "complexityScore": 7,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "List subtasks for metric collection, dashboard display, Slack alerting, PagerDuty integration, analytics setup, and integration testing.",
+      "reasoning": "Observability spans data collection, alerting, dashboarding, and third-party integrations, each with unique requirements."
+    },
+    {
+      "taskId": 12,
+      "taskTitle": "Develop UI/UX Components and Design System",
+      "complexityScore": 6,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Decompose into subtasks for component adaptation, Tailwind CSS styling, TV-specific adjustments, accessibility improvements, and layout implementation.",
+      "reasoning": "While design systems are broad, this task focuses on adaptation and styling, which are less complex than backend or integration-heavy tasks."
+    },
+    {
+      "taskId": 13,
+      "taskTitle": "Implement Salesforce User Sync and Avatar Management",
+      "complexityScore": 6,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break into subtasks for user data fetching, sf_users table updates, nightly delta sync, avatar storage, and org deletion cleanup.",
+      "reasoning": "This task involves scheduled sync, data storage, and asset management, but is more contained than full OAuth or ingestion pipelines."
+    },
+    {
+      "taskId": 14,
+      "taskTitle": "Implement Security and Compliance Controls",
+      "complexityScore": 7,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Expand into subtasks for encryption setup, RLS enforcement, PII audit, data retention policy, SOC 2 preparation, and compliance testing.",
+      "reasoning": "Security and compliance require careful, multi-layered implementation and validation, each with regulatory and technical considerations."
+    },
+    {
+      "taskId": 15,
+      "taskTitle": "Develop Operational Excellence and Reliability Features",
+      "complexityScore": 7,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "List subtasks for failover implementation, circuit breaker setup, graceful degradation, uptime monitoring, SLA enforcement, and scalability testing.",
+      "reasoning": "Reliability features span infrastructure, application logic, and monitoring, each with distinct technical challenges."
+    }
+  ]
+}
