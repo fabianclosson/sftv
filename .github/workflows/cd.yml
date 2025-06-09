@@ -31,15 +31,32 @@ jobs:
       - name: Build all packages
         run: npm run build
 
-      - name: Deploy Web App to Vercel
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          working-directory: ./apps/web
-          vercel-args: '--prod'
-          github-comment: true
+      - name: Deployment Status
+        run: |
+          echo "✅ Build completed successfully!"
+          echo "🚀 Ready for deployment setup:"
+          echo ""
+          echo "📝 Vercel Setup Required:"
+          echo "   1. Import GitHub repo to Vercel"
+          echo "   2. Add environment variables"
+          echo "   3. Configure GitHub secrets for auto-deployment"
+          echo ""
+          echo "📝 Supabase Setup Required:"
+          echo "   1. Run database schema in SQL Editor"
+          echo "   2. Configure authentication settings"
+          echo ""
+          echo "🎯 All code is ready - just needs manual deployment setup!"
+
+      # Vercel deployment will be enabled after manual setup
+      # - name: Deploy Web App to Vercel
+      #   uses: amondnet/vercel-action@v25
+      #   with:
+      #     vercel-token: ${{ secrets.VERCEL_TOKEN }}
+      #     vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+      #     vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+      #     working-directory: ./apps/web
+      #     vercel-args: '--prod'
+      #     github-comment: true
 
       - name: Deploy Supabase Edge Functions
         if: github.ref == 'refs/heads/main'
@@ -58,8 +75,9 @@ jobs:
       - name: Deployment Status
         run: |
           if [ "${{ needs.deploy.result }}" == "success" ]; then
-            echo "✅ Deployment completed successfully"
+            echo "✅ Deployment pipeline ready for configuration"
+            echo "📝 Next: Set up Vercel and Supabase integrations"
           else
-            echo "❌ Deployment failed"
+            echo "❌ Build pipeline failed"
             exit 1
           fi 
