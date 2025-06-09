@@ -1,0 +1,23 @@
+{
+  "name": "@sftv/supabase-edge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Supabase Edge Functions for SFTV",
+  "type": "module",
+  "scripts": {
+    "dev": "echo 'Supabase CLI required for development'",
+    "deploy": "echo 'Supabase CLI required for deployment'",
+    "lint": "echo 'Deno required for linting'",
+    "type-check": "echo 'Deno and Supabase Edge Functions will be set up in Task 1.4'",
+    "clean": "rm -rf .output"
+  },
+  "devDependencies": {
+    "@supabase/functions-js": "^2.4.1"
+  },
+  "keywords": [
+    "supabase",
+    "edge-functions",
+    "deno",
+    "serverless"
+  ]
+} 
