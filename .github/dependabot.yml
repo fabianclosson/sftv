@@ -1,0 +1,68 @@
+version: 2
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "America/New_York"
+    open-pull-requests-limit: 10
+    target-branch: "develop"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    reviewers:
+      - "@sftv-team"
+    labels:
+      - "dependencies"
+      - "automated"
+
+  # Web app specific dependencies
+  - package-ecosystem: "npm"
+    directory: "/apps/web"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "10:00"
+      timezone: "America/New_York"
+    open-pull-requests-limit: 5
+    target-branch: "develop"
+    commit-message:
+      prefix: "deps(web)"
+    labels:
+      - "dependencies"
+      - "web-app"
+
+  # TV client specific dependencies
+  - package-ecosystem: "npm"
+    directory: "/apps/tv-client"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "11:00"
+      timezone: "America/New_York"
+    open-pull-requests-limit: 5
+    target-branch: "develop"
+    commit-message:
+      prefix: "deps(tv-client)"
+    labels:
+      - "dependencies"
+      - "tv-client"
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "12:00"
+      timezone: "America/New_York"
+    open-pull-requests-limit: 3
+    target-branch: "develop"
+    commit-message:
+      prefix: "ci"
+    labels:
+      - "ci"
+      - "github-actions" 
